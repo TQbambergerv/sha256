@@ -1,13 +1,22 @@
 /*********************************************************************
 * Filename:   sha256.h
-* Author:     Brad Conte (brad AT bradconte.com)
+* Author:     Brad Conte (brad AT bradconte.com), Vincent Bamberger
 * Copyright:
 * Disclaimer: This code is presented "as is" without any guarantees.
 * Details:    Defines the API for the corresponding SHA1 implementation.
 *********************************************************************/
 
+/**
+ * @macro SHA_NATIVE_LITTLE_ENDIAN
+ * Set this to 1 if you want the hash to be little-endian. Only works on native little-endian systems.
+ */
+#ifndef SHA_NATIVE_LITTLE_ENDIAN
+#define SHA_NATIVE_LITTLE_ENDIAN 0
+#endif
+
 #ifndef SHA256_H
 #define SHA256_H
+
 
 /*************************** HEADER FILES ***************************/
 #include <stddef.h>
